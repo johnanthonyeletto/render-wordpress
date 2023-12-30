@@ -1,6 +1,7 @@
 # You can change this to a different version of Wordpress available at
 # https://hub.docker.com/_/wordpress
 FROM wordpress:5.3.2-php7.4-apache
+COPY php.ini $PHP_INI_DIR/conf.d/
 
 RUN apt-get update && apt-get install -y magic-wormhole
 
